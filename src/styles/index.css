@@ -1,0 +1,140 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    background-color: #fff;
+}
+.container{
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+/*/ Header Styles /*/
+
+nav{
+    position: fixed !important; 
+    top :0;
+    width: 100%;
+    z-index: 999;
+}
+nav .logo{
+    font-size: 1.7rem;
+    font-weight: 600;
+}
+nav ul li a {
+    font-size: 1rem;
+    font-weight: 500;
+    color: #fff !important;
+    margin-left: 10px;
+    position: relative;
+}
+nav ul li a::after{
+    content: "";
+    display: block;
+    width: 0;
+    height: 3px;
+    background: #fff;
+    transition: width 0.5s ease;
+    position: absolute;
+    bottom:-5px;
+    left: 2px;
+}
+nav ul li a:hover::after{
+    width: 100%;
+}
+.dropdown-toggle::after{
+  border: none
+}
+.dropdown-item:hover {
+  background-color: #888;
+  width: 90%;
+}
+.dropdown-item:hover::after{
+    width: 0;
+}
+nav ul li a.active::after{
+    width: 100%;
+}
+@media (max-width: 991px)
+{
+.navbar-nav{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+}
+/*/ Hero Styles /*/
+
+#hero-section{
+    background-image: url(../../public/photo3jpg.jpg);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center; 
+    width: 100%;
+    
+}
+#hero-section h1 
+ {
+    color: #fff; 
+    font-size: 3rem;
+    font-weight: 600;
+}
+#hero-section p{
+    color: #fff;
+    font-size: 1.9rem;
+    font-weight: 600;
+    margin-top: 20px;
+}
+
+/* About Styles */
+#about .container{
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 40px;
+}
+ #about .about-info ul li {
+  margin-bottom: 16px;
+  white-space: nowrap;
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+#about .about-text h2 {
+  font-size: 2.5rem;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+#about .about-text p {
+  font-size: 1.2rem;
+  font-weight: 400;
+  line-height: 1.5;
+}
+.progress {
+  height: 8px;
+}
+.progress-bar {
+  transition: width 0.6s ease-in-out;
+}
+.skills {
+  width: 100%;
+}
+@media (max-width: 767px) {
+  #about .about-info ul {
+    margin-left: 0 !important;
+  }
+}
