@@ -1,4 +1,5 @@
 import { navData } from "../data/main.js";
+
 export function headerSection() {
     const nav = document.getElementById("nav");
     nav.innerHTML = `
@@ -58,4 +59,7 @@ export function headerSection() {
             this.classList.add("active");      
         })
     })
+   
 }
+
+ 
