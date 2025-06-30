@@ -209,10 +209,10 @@ nav ul li a.active::after{
 
 
 /* Disabled Data*/
-/* [data-aos] {
+[data-aos] {
   backface-visibility: hidden;
   -webkit-backface-visibility: hidden;
   transform: translateZ(0);
   will-change: transform, opacity;
-} */
+}
 
