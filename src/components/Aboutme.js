@@ -10,4 +10,6 @@ export function aboutSection (){
     aboutPhone.textContent = "Phone"+ " : "+aboutData.phone; 
     
 }    
-
+export function resumeList() {
+    
+}

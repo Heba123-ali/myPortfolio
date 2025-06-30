@@ -3,9 +3,6 @@ import { aboutSection } from "./components/Aboutme.js";
 import { headerSection } from "./components/Header.js";
 document.addEventListener("DOMContentLoaded", ()=>{
     aboutSection();
-     
-});
-
-document.addEventListener("DOMContentLoaded", () => {
     headerSection();
+     
 });

@@ -1,8 +1,7 @@
 import { navData } from "../data/main.js";
 export function headerSection() {
-    const header = document.createElement("header");
-    header.innerHTML = `
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    const nav = document.getElementById("nav");
+    nav.innerHTML = `
         <div class="container">
           <a href="#" class="navbar-brand logo">${navData.brand}</a>
           <button
@@ -20,19 +19,13 @@ export function headerSection() {
             <ul class="navbar-nav ms-auto" id="nav-links"></ul>
             </div>
           </div>
-          </nav>
-    
     `;
-    document.body.append(header);
+    
     const navLinks = document.getElementById("nav-links");
-
-
     navData.links.forEach(link => {
   const li = document.createElement("li");
   li.classList.add("nav-item");
-
   const isActive = link.name.toLowerCase() === "home" ? "active" : "";
-
   if (link.type === "dropdown") {
     li.classList.add("dropdown");
     li.innerHTML = `
@@ -62,12 +55,7 @@ export function headerSection() {
     navItem.forEach(link => {
         link.addEventListener("click", function () {
             navItem.forEach(item => item.classList.remove("active"))
-            this.classList.add("active");
-                
-            
+            this.classList.add("active");      
         })
     })
-
-
 }
-
