@@ -1,9 +1,8 @@
 import { PortfolioData } from "../data/main.js";
-
 export function portfolioSection() {
   const portfolio = document.getElementById("portfolio");
   portfolio.innerHTML = `
-    <div class="container">
+    <div class="container w-75 h-100">
       <h2 class="text-center underline mb-4">portfolio</h2>
       <p class="text-center text-secondary mb-5">
         "Explore my work and creative project collection."
@@ -12,49 +11,64 @@ export function portfolioSection() {
         <li class="active" data-filter="All">All</li>
         <li data-filter="Products">Products</li>
         <li data-filter="Branding">Branding</li>
+        <li data-filter="Apps">Apps</li>
         <li data-filter="Books">Books</li>
       </ul>
       <div class="row" id="portfolio-gallery">
-        <!-- الصور هتتحط هنا ديناميك -->
+
       </div>
     </div>
   `;
-
   const listItem = document.querySelectorAll("#portfolio ul li");
   const gallery = document.getElementById("portfolio-gallery");
-  function displayImages(category) {
-    gallery.innerHTML = ""; 
 
+  function displayImages(category) {
+    gallery.innerHTML = "";
+
+    const renderImage = (src, category) => {
+      const col = document.createElement("div");
+      col.className = "col-md-3 mb-4 position-relative ";
+
+      col.innerHTML = `
+        <div class="img-box position-relative overflow-hidden rounded shadow w-100">
+          <img src="${src}" alt="${category}" class="w-100">
+          <div class="text-img p-2 w-100 h-50 d-flex align-items-center gap-5 bg-opacity-75 text-dark bg-white">
+          <div>
+            <h4 class=" fs-6 fw-bold">Website</h4>
+          <p class="m-1 fs-6 fw-lighter">Front-end developer</p>
+          </div>
+           <div class="d-flex gap-1">
+              <i class="fa-solid fa-magnifying-glass-plus"></i>
+              <i class="fa-solid fa-link"></i>
+            </div>
+          </div>
+        </div>
+      `;
+      gallery.appendChild(col);
+    };
     if (category === "All") {
-      // نعرض كل الصور في أعمدة
-      Object.keys(PortfolioData).forEach(cat => {
-        PortfolioData[cat].forEach(src => {
-          const col = document.createElement("div");
-          col.className = "col-md-4 mb-4";
-          col.innerHTML = `<img src="${src}" alt="" class="w-100 rounded shadow">`;
-          gallery.appendChild(col);
+      Object.keys(PortfolioData).forEach(el => {
+      PortfolioData[el].forEach(src => {
+          renderImage(src, el);
         });
       });
     } else {
-      // نعرض فئة واحدة في صف
-      const row = document.createElement("div");
-      row.className = "d-flex justify-content-center flex-wrap gap-3";
-      PortfolioData[category].forEach(src => {
-        const img = document.createElement("img");
-        img.src = src;
-        img.alt = category;
-        img.className = "img-fluid";
-        img.style.maxWidth = "30%"; // علشان 3 صور جنب بعض
-        row.appendChild(img);
+      PortfolioData[category]?.forEach(src => {
+        renderImage(src, category);
       });
-      gallery.appendChild(row);
     }
+    const boxes = document.querySelectorAll(".img-box");
+    boxes.forEach(box => {
+      const overlay = box.querySelector(".text-img");
+      box.addEventListener("mouseenter", () => {
+        overlay.style.opacity = "1";
+      });
+      box.addEventListener("mouseleave", () => {
+        overlay.style.opacity = "0";
+      });
+    });
   }
-
-  // نعرض الكل في الأول
   displayImages("All");
-
-  // تعامل مع الفلاتر
   listItem.forEach(link => {
     link.addEventListener("click", function () {
       listItem.forEach(item => item.classList.remove("active"));

@@ -32,23 +32,28 @@ export const countersData ={
     HoursOfSupport: "5684",
     Awards : "658",
 }
-
 export const PortfolioData = {
     Products: [
-        "../../public//pexels-madebymath-90946.jpg",
-        "../../public/pexels-madebymath-90946.jpg",
-        "../../public/pexels-madebymath-90946.jpg"
+         "../../public/mobple1.jpg",
+        "../../public/mobple2.jpg",
+        "../../public/mobple3.jpg",
     ],
     Branding: [
+        "../../public/brand1.jpg",
+        "../../public/brand2.jpg",
+        "../../public/brand3.jpg",
+    ],
+    Apps: [
         "../../public/mobple1.jpg",
-        "../../public/mobple1.jpg",
-        "../../public/mobple1.jpg"
-
+        "../../public/mobple2.jpg",
+        "../../public/mobple3.jpg",
     ],
     Books: [
-        
-        "../../public/pexels-jessbaileydesign-762686.jpg",
-        "../../public/pexels-jessbaileydesign-762686.jpg",
-        "../../public/pexels-jessbaileydesign-762686.jpg"
+        "../../public/book.jpg",
+        "../../public/books2.jpg",
+        "../../public/book3.jpg",
     ],
 }
+
+
+
