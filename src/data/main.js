@@ -34,24 +34,24 @@ export const countersData ={
 }
 export const PortfolioData = {
     Products: [
-         "../../public/mobple1.jpg",
-        "../../public/mobple2.jpg",
-        "../../public/mobple3.jpg",
+         "public/mobple1.jpg",
+        "public/mobple2.jpg",
+        "public/mobple3.jpg",
     ],
     Branding: [
-        "../../public/brand1.jpg",
-        "../../public/brand2.jpg",
-        "../../public/brand3.jpg",
+        "public/brand1.jpg",
+        "public/brand2.jpg",
+        "public/brand3.jpg",
     ],
     Apps: [
-        "../../public/mobple1.jpg",
-        "../../public/mobple2.jpg",
-        "../../public/mobple3.jpg",
+        "public/mobple1.jpg",
+        "public/mobple2.jpg",
+        "public/mobple3.jpg",
     ],
     Books: [
-        "../../public/book.jpg",
-        "../../public/books2.jpg",
-        "../../public/book3.jpg",
+        "public/book.jpg",
+        "public/books2.jpg",
+        "public/book3.jpg",
     ],
 }
 

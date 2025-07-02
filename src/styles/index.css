@@ -213,7 +213,7 @@ nav ul li a.active::after{
 
 /* counters Styles */
 #counters{
-  background-image: url(../../public/Brand3.jpg);
+  background-image: url(../../public/brand3.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   padding: 1rem;
