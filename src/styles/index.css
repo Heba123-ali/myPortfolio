@@ -229,7 +229,8 @@ nav ul li a.active::after{
 #counters h2{
   font-size: 2.5rem;
 }
-#counters::before{
+#counters::before,
+#testimonials::before{
   content: "";
   position: absolute;
   left:0;
@@ -279,5 +280,20 @@ nav ul li a.active::after{
   border-radius: 25px !important;
   padding: 10px;
   border: 3px solid #0078ff;
+}
+
+/* faq Styles */
+
+#testimonials {
+  background-image: url('../../public/faq.jpg');
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  z-index: 5;
+}
+#testimonials img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
 }
 
