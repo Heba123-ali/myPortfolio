@@ -5,17 +5,17 @@ export const navData = {
         { id: 1, name: "Home", href: "#hero-section" },
         { id: 2, name: "About", href: "#about" },
         { id: 3, name: "Services", href: "#services" },
-        { id: 4, name: "Portfolio", href: "#portfolio" },
+        // { id: 4, name: "Portfolio", href: "#portfolio" },
         { id: 5, name: "Contact", href: "#contact" },
-     {
-         id: 6,
-         name: "More",
-         type: "dropdown",
-        item:[
-            {  name: "Blog", href: "#blog" },
-            {  name: "FaQ", href: "#faq" },
-    ],
-        }
+    //  {
+    //      id: 6,
+    //      name: "More",
+    //      type: "dropdown",
+    //     item:[
+    //         {  name: "Blog", href: "#blog" },
+    //         {  name: "FaQ", href: "#faq" },
+    // ],
+    //     }
     ]
 };
 export const aboutData = {
